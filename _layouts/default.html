@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0; width=device-width" />
+  <meta name="author" content="{{ site.author }}" /> {% if page.title %}
+  <title>{{ page.title }}</title>
+  {% else %}
+  <title>{{ site.name }}</title>
+  {% endif %}
+  <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+  <!-- <link href="/atom.xml" rel="alternate" title="{{ site.name }}" type="application/atom+xml" /> -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="/{{ site.theme_dir }}/{{ site.theme_name }}/css/styles.css">
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css"> -->
+  <link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script> -->
+  <script src="https://cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script src="http://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/toc/0.3.2/toc.bower.min.js"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+  <div id="main" role="main">
+    <header>
+      <div id="header">
+        <h1><a title="{{ site.name }}" class="" href="/">{{ site.name }}</a></h1>
+      </div>
+      <nav>
+        {% for nav in site.navigations %}
+        <span><a title="{{ nav.title }}" href="{{ nav.href }}"><i class="{{ nav.class }}"></i></a></span> {% endfor %}
+      </nav>
+    </header>
+
+    <div id="content">
+      {{ content }}
+    </div>
+
+    <footer>
+      <div>
+        {% assign first_post = site.posts | last %} &copy; {{ first_post.date | date: "%Y" }} ~ {{ site.time | date: "%Y" }} {{ site.author }} | <a href="/">home</a> {{ site.footer }}
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    var array = new Array('language-code', 'language-javascript', 'language-php', 'language-c', 'language-cpp', 'language-java', 'language-lisp', 'language-bash', 'language-matlab', 'language-mathematica', 'language-css', 'language-html', 'language-xml', 'language-cs', 'language-python', 'language-ruby', 'language-latex', 'language-nasm', 'language-masm', 'language-lingo');
+    var code = document.querySelectorAll("pre code");
+    for (var i = 0; i < code.length; i++) {
+	  language = code[i].className.toLocaleLowerCase().match("language-[^ ]*");
+	  if (language) {
+		  language = language[0];
+	  } else {
+		  language = "degregasfe25343vdg4t3";
+	  }
+	  
+	  console.log(language);
+      if (array.indexOf(language) != -1) {
+        var replace_html = '';
+		var line_span_html = '';
+        var split_array = code[i].innerHTML.split("\n");
+        code[i].innerHTML = split_array[0];
+        for (var j = 0; j < split_array.length - 1; j++) {
+		  replace_html = replace_html + "<span class=\"hljs-number\" ></span>" + split_array[j] + ((j == split_array.length - 2) ? '' : '\n');
+		  line_span_html = line_span_html + "<span>" + ((j > 8) ? '' : ' ') + (j + 1).toString() + " </span>\n";
+        }
+        code[i].innerHTML = replace_html;
+		code[i].insertAdjacentHTML('beforebegin', '<code class="code_line">' + line_span_html.substring(0, line_span_html.length - 1) + '</code>');
+	  } else {
+		// allele = code[i].querySelectorAll('[class*=hljs-]');
+		// for (var kk = 0; kk < allele.length; kk++) {
+		// 	remove_class = allele[kk].className.toLocaleLowerCase().match("hljs-[^ ]*")[0];
+		// 	allele[kk].classList.remove(remove_class);
+		// }
+		code[i].classList.add("nohighlight");
+			
+	  }
+    }
+
+    var li_p = document.querySelectorAll("p");
+    for (var i = 0; i < li_p.length; i++) {
+      var index = 1;
+      if (li_p[i].parentNode.tagName == "LI" && index == 1) {
+        var newNode = document.createTextNode(li_p[i].innerHTML);
+        li_p[i].parentNode.insertBefore(newNode, li_p[i]);
+        li_p[i].parentNode.removeChild(li_p[i]);
+      }
+    }
+
+	all_table = document.getElementsByTagName('table');
+	for (i=1;i<=all_table.length;i++){
+		all_table[i-1].insertAdjacentHTML('beforebegin', '<div class="table-responsive"></div>');
+		all_table[i-1].previousElementSibling.insertAdjacentHTML('afterbegin', all_table[i-1].outerHTML);
+		all_table[i].remove();
+	}
+	
+	
+	
+	var gitment = new Gitment({
+	  owner: 'AImager',
+	  repo: 'blog',
+	  oauth: {
+	    client_id: 'f6fdc5a924ad8ff6a85d',
+	    client_secret: '7ce8865d2d9df65ed35b7d769eac1fcf0fb8affa',
+	  },
+	})
+	gitment.render('container_comment')
+	
+
+	
+	
+	$('#content_nav').click(function() {
+		$('#toc').toc({
+			'selectors': 'h2,h3',
+			'highlightOnScroll': true,
+			'smoothScrolling': true
+		});
+		$("#toc").toggle('slow');
+		$("#toc_body").show();
+		
+		document.getElementById('toc').onmousewheel = function(e) { 
+		  document.getElementById('toc').scrollTop -= e.wheelDeltaY; 
+		  e.preventDefault();
+		}
+	});
+	
+	$('#toc_body').click(function () {
+		$("#toc").toggle('slow');
+		$("#toc_body").hide();
+	});
+	
+	
+	
+	
+
+  </script>
+
+</body>
+
+</html>
