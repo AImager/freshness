@@ -65,16 +65,15 @@
     });
 
     var array = new Array('language-code', 'language-javascript', 'language-php', 'language-c', 'language-cpp', 'language-java', 'language-lisp', 'language-bash', 'language-matlab', 'language-mathematica', 'language-css', 'language-html', 'language-xml', 'language-cs', 'language-python', 'language-ruby', 'language-latex', 'language-nasm', 'language-masm', 'language-lingo');
-    var code = document.querySelectorAll("pre code");
+    var code = document.querySelectorAll("pre>code");
     for (var i = 0; i < code.length; i++) {
-	  language = code[i].className.toLocaleLowerCase().match("language-[^ ]*");
+	  language = code[i].parentNode.parentNode.className.toLocaleLowerCase().match("language-[^ ]*");
 	  if (language) {
 		  language = language[0];
 	  } else {
 		  language = "degregasfe25343vdg4t3";
 	  }
 	  
-	  console.log(language);
       if (array.indexOf(language) != -1) {
         var replace_html = '';
 		var line_span_html = '';
@@ -87,11 +86,6 @@
         code[i].innerHTML = replace_html;
 		code[i].insertAdjacentHTML('beforebegin', '<code class="code_line">' + line_span_html.substring(0, line_span_html.length - 1) + '</code>');
 	  } else {
-		// allele = code[i].querySelectorAll('[class*=hljs-]');
-		// for (var kk = 0; kk < allele.length; kk++) {
-		// 	remove_class = allele[kk].className.toLocaleLowerCase().match("hljs-[^ ]*")[0];
-		// 	allele[kk].classList.remove(remove_class);
-		// }
 		code[i].classList.add("nohighlight");
 			
 	  }
