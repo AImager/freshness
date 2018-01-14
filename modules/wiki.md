@@ -10,7 +10,8 @@ permalink: /wiki.html
 {% for category in categories %}
   <li class="listing-seperator" id="{{ category.name }}"><h2>{{ category.name | remove: "_wiki/" }}</h2></li>
   {% for wiki in site.wiki %}
-  {% if wiki.path contains category.name %}
+  {% assign wikipath = wiki.path  | split: '/' | pop | join: '/' %}
+  {% if wikipath == category.name %}
     <li class="listing-item">
       <a href="{{ wiki.url }}" title="{{ wiki.title }}">{{ wiki.title }}</a>
       <span class="wiki_tags">
