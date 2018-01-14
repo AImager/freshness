@@ -11,7 +11,11 @@ layout: default
         <span> 
           {% assign naglast = site.nagging.last.title | split:'-' | last %}
           {% assign nagfirst = site.nagging.first.title | split:'-' | last %}
+          {% if page.title == "nagging" %}
+          {% assign nagcurrent = site.nagging.last.title | split:'-' | last %}
+          {% else %}
           {% assign nagcurrent = page.title | split:'-' | last %}
+          {% endif %}
           {% assign nagpre = nagcurrent | minus:1 %}
           {% assign nagnext = nagcurrent | plus:1 %}
           {% assign nagpreurl = '/nagging/year.html' | replace_first:'year',nagpre %}

@@ -84,7 +84,7 @@
     var array = new Array('language-code', 'language-javascript', 'language-php', 'language-c', 'language-cpp', 'language-java', 'language-lisp', 'language-bash', 'language-matlab', 'language-mathematica', 'language-css', 'language-html', 'language-xml', 'language-cs', 'language-python', 'language-ruby', 'language-latex', 'language-nasm', 'language-masm', 'language-lingo');
     var code = document.querySelectorAll("pre>code");
     for (var i = 0; i < code.length; i++) {
-      language = code[i].parentNode.parentNode.parentNode.className.toLocaleLowerCase().match("language-[^ ]*");
+      language = code[i].parentNode.parentNode.className.toLocaleLowerCase().match("language-[^ ]*");
       if (language) {
         language = language[0];
       } else {
