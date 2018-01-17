@@ -13,7 +13,7 @@ permalink: /wiki.html
   {% assign wikipath = wiki.path  | split: '/' | pop | join: '/' %}
   {% if wikipath == category.name %}
     <li class="listing-item">
-      <a href="{{ wiki.url }}" title="{{ wiki.title }}">{{ wiki.title }}</a>
+      <a href="{{ wiki.url }}" title="{{ wiki.title }}">{{ wiki.title | downcase }}</a>
       <span class="wiki_tags">
         {% for tag in wiki.tags %}
         <span>{{ tag }}</span>
