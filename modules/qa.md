@@ -8,25 +8,18 @@ permalink: /qa.html
 <ul class="listing">
 
 {% assign categories = site.qa | group_by: "category" | sort: "name" %}
+{% assign categories = site.qa | group_by_exp: "item", "item.path | split: '/' | pop | join: '/'" | sort: "name" %}
 
 
 {% for category in categories %}
-  <li class="listing-seperator" id="{{ category.name }}"><h2>{{ category.name }}</h2></li>
-{% for qa in site.qa %}
-{% if qa.category == category.name %}
-  <li class="listing-item">
-  <!--<time datetime="{{ wiki.category }}">{{ wiki.date | date:"%Y-%m-%d" }}</time>-->
-  <a href="{{ qa.url }}" title="{{ qa.title }}">{{ qa.title }}</a>
-  <!-- <span class="wiki_tags">{% for tag in qa.tags %}
-  <span>{{ tag }}</span>
+  <li class="listing-seperator" id="{{ category.name }}"><h2>{{ category.name | remove: "_qa/"  }}</h2></li>
+  {% for qa in site.qa %}
+  {% assign qapath = qa.path  | split: '/' | pop | join: '/' %}
+  {% if qapath == category.name %}
+    <li class="listing-item">
+      <a href="{{ qa.url }}" title="{{ qa.title }}">{{ qa.title | downcase  }}</a>
+    </li>
+  {% endif %}
   {% endfor %}
-  </span> -->
-
-  </li>
-
-
-
-{% endif %}
-{% endfor %}
 {% endfor %}
 </ul>
