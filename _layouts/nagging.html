@@ -11,7 +11,7 @@ layout: default
         <span> 
           {% assign naglast = site.nagging.last.title | split:'-' | last %}
           {% assign nagfirst = site.nagging.first.title | split:'-' | last %}
-          {% if page.title == "nagging" %}
+          {% if page.title == "Nagging" %}
           {% assign nagcurrent = site.nagging.last.title | split:'-' | last %}
           {% else %}
           {% assign nagcurrent = page.title | split:'-' | last %}
