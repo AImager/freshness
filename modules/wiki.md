@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: wiki
+title: Wiki
 permalink: /wiki.html
 ---
 

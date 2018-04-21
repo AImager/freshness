@@ -1,6 +1,6 @@
 ---
 layout: page
-title: home
+title: Home
 permalink: /index.html
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: qa
-title: qa
+title: Q&A
 permalink: /qa.html
 ---
 

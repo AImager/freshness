@@ -1,6 +1,6 @@
 ---
 layout: nagging
-title: nagging
+title: Nagging
 permalink: /nagging.html
 ---
 
