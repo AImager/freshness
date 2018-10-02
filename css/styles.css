@@ -506,6 +506,11 @@ code.code_line {
     .table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>th,.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>td {
         border-bottom: 0
     }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
 }
 
 
@@ -513,7 +518,14 @@ code.code_line {
 	.table-responsive table {
 		border: 1px dashed #e0e0e0;
 		/*border-bottom: 1px dashed #e0e0e0;*/
-	}
+  }
+
+  video {
+    width: 534px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 
@@ -551,7 +563,7 @@ div.gitment-comment-header {
 	color: #fff !important;
 	width: 30px;
 	height: 30px;
-	display: -webkit-box; 
+	display: -webkit-box;
 	-webkit-box-align: center;
 	-webkit-box-pack: center;
 	z-index:1000;
@@ -574,8 +586,8 @@ div.gitment-comment-header {
 	height: 100%;
 	width: 200px;
 	right: 0;
-	bottom: 0;	
-	overflow-y:scroll;  
+	bottom: 0;
+	overflow-y:scroll;
 	top: 0;
 	z-index:9999;
 }
@@ -600,9 +612,9 @@ div.gitment-comment-header {
 
 #toc li {
     padding: 2px 5px;
-	white-space:nowrap; 
-	overflow:hidden; 
-	text-overflow: ellipsis; 
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
 }
 
 #toc a {
