@@ -11,7 +11,6 @@ permalink: /index.html
     <section class="title">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     </section>
-
     <section class="meta">
     <span class="time">
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -24,7 +23,6 @@ permalink: /index.html
     </span>
     {% endif %}
     </section>
-
     <section class="post">
     {{ post.content }}
     </section>
