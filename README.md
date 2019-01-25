@@ -16,11 +16,6 @@ Personal blog jekyll theme, view this jekyll theme in action [here](http://blog.
     * Q&A page
     * Nagging page
 
-
-## Getting Started
-
-To learn how to install and use this theme check out the [Setup Guide]() for more information.
-
 ![](/img/archive.png)
 
 ![](/img/post.png)

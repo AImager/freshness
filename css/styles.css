@@ -23,7 +23,7 @@
 }
 
 ul.nagging {
-	margin-left: 0;
+    margin-left: 0;
 }
 
 
@@ -45,7 +45,7 @@ ul, ol {
 }*/
 
 /*li>ul {
-	margin-top: 0px;
+    margin-top: 0px;
 }*/
 
 blockquote>blockquote {
@@ -79,7 +79,7 @@ article .divider a:hover {
 
 
 .fa-wiki:before {
-	content:"\f02d";
+    content:"\f02d";
 }
 
 a:hover {
@@ -103,8 +103,8 @@ a:hover {
 }*/
 
 td, th {
-	padding-left: 6px;
-	padding-right: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 /*.wiki h3+p {
@@ -129,11 +129,11 @@ pre code {
 }
 
 pre code:nth-of-type(2) {
-	padding-left: 38px !important;
+    padding-left: 38px !important;
 }
 
 pre code {
-	padding: 0.5em;
+    padding: 0.5em;
 }
 
 code {
@@ -212,7 +212,7 @@ ul.listing li {
 }
 
 .main-listing, .listing-item, .listing-seperator{
-	list-style-type: none;
+    list-style-type: none;
 }
 
 ul.listing li.listing-item a {
@@ -397,14 +397,14 @@ h2 {
 
 
 pre {
-	position: relative;
+    position: relative;
 }
 
 
 code.code_line {
     position: absolute;
-	left: 2px;
-	top: 1px;
+    left: 2px;
+    top: 1px;
     margin: 0px;
     padding: 0px;
     border: 0px  !important;
@@ -491,7 +491,7 @@ code.code_line {
         overflow-x: scroll;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         border: 1px dashed #e0e0e0;
-		/*border-right: 1px dashed #e0e0e0;*/
+        /*border-right: 1px dashed #e0e0e0;*/
         -webkit-overflow-scrolling: touch
     }
 
@@ -523,9 +523,9 @@ code.code_line {
 
 
 @media (min-width: 767px) {
-	.table-responsive table {
-		border: 1px dashed #e0e0e0;
-		/*border-bottom: 1px dashed #e0e0e0;*/
+    .table-responsive table {
+        border: 1px dashed #e0e0e0;
+        /*border-bottom: 1px dashed #e0e0e0;*/
   }
 
 }
@@ -537,43 +537,43 @@ code.code_line {
 /*gitment_overwrite*/
 
 .gitment-comments-empty {
-	display: none;
+    display: none;
 }
 
 a.gitment-editor-footer-tip {
-	display: none !important;
+    display: none !important;
 }
 
 div.gitment-container.gitment-footer-container {
-	display: none;
+    display: none;
 }
 
 
 div.gitment-comment-header {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 
 /*content*/
 
 #content_nav {
-	position: fixed;
-	right: 5.5%;
-	bottom: 8%;
-	background-color: #bb2222;
-	opacity:0.5;
-	color: #fff !important;
-	width: 30px;
-	height: 30px;
-	display: -webkit-box;
-	-webkit-box-align: center;
-	-webkit-box-pack: center;
-	z-index:1000;
+    position: fixed;
+    right: 5.5%;
+    bottom: 8%;
+    background-color: #bb2222;
+    opacity:0.5;
+    color: #fff !important;
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    z-index:1000;
 }
 
 #content_nav_t {
-	display: block;
-	font-style: normal;
+    display: block;
+    font-style: normal;
 }
 
 
@@ -581,26 +581,26 @@ div.gitment-comment-header {
 /*toc content*/
 
 #toc {
-	/*padding: 100px;*/
-	background-color: #eee;
-	display: none;
-	position: fixed;
-	height: 100%;
-	width: 200px;
-	right: 0;
-	bottom: 0;
-	overflow-y:scroll;
-	top: 0;
-	z-index:9999;
+    /*padding: 100px;*/
+    background-color: #eee;
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    right: 0;
+    bottom: 0;
+    overflow-y:scroll;
+    top: 0;
+    z-index:9999;
 }
 
 /*#toc {
-	position: fixed;
-	right: 0;
-	top: 0;
-	height: 100%;
-	width: 150px;
-	box-shadow: inset -5px 0 5px 0px #000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    box-shadow: inset -5px 0 5px 0px #000;
     padding-top: 20px;
     color: #fff;
 }*/
@@ -614,9 +614,9 @@ div.gitment-comment-header {
 
 #toc li {
     padding: 2px 5px;
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow: ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
 }
 
 #toc a {
@@ -639,15 +639,15 @@ div.gitment-comment-header {
 }
 
 #toc .toc-active a {
-	color: #fff !important;
+    color: #fff !important;
 }
 
 #toc_body {
-	display: none;
-	background-color: translate;
-	width: calc(100% - 200px);
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
+    display: none;
+    background-color: translate;
+    width: calc(100% - 200px);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
