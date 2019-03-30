@@ -1,0 +1,58 @@
+/*toc content*/
+
+#toc {
+    background-color: #262a30;
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    top: 0;
+    z-index: 9999;
+}
+
+
+#toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#toc li {
+    padding: 2px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2em !important;
+    text-decoration: none;
+    display: block;
+}
+
+#toc li a {
+    color: #999;
+}
+
+#toc .toc-active a {
+    color: #b96969;
+}
+
+#toc li.toc-h3 {
+    padding-left: 35px;
+}
+
+#toc li.toc-h4 {
+    padding-left: 55px;
+}
+
+#toc_body {
+    display: none;
+    background-color: translate;
+    width: calc(100% - 200px);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

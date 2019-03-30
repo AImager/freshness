@@ -1,0 +1,18 @@
+/*gitment_overwrite*/
+
+.gitment-comments-empty {
+    display: none;
+}
+
+a.gitment-editor-footer-tip {
+    display: none !important;
+}
+
+div.gitment-container.gitment-footer-container {
+    display: none;
+}
+
+
+div.gitment-comment-header {
+    background-color: transparent;
+}
