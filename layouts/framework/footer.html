@@ -1,0 +1,10 @@
+<footer>
+    <div>
+        {% assign first_post = site.posts | last %} &copy;
+        {{ first_post.date | date: "%Y" }} ~ {{ site.time | date: "%Y" }}
+        {{ site.author}} | <a href="/">home</a>
+        {% if site.footer %} | {{ site.footer }} {% endif %}
+    </div>
+</footer>
+
+<script src="/{{ site.theme_dir }}/{{ site.theme_name }}/js/freshness.js"></script>
