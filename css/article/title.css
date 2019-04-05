@@ -1,0 +1,7 @@
+article>.title>a {
+    color: var(--base-select-backgroup-color);
+}
+
+article>.title>a:hover {
+    color: var(--base-link-hover-color);
+}

@@ -1,0 +1,7 @@
+#home .title a {
+    color: var(--base-s-light-color);
+}
+
+#home .title a:hover {
+    color: var(--base-link-hover-color);
+}

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 <article>
@@ -25,7 +25,10 @@ layout: default
         {{ content }}
     </section>
 
+</article>
 
+
+<aside>
     <div class="divider">
         <span>
             {% if page.previous %}
@@ -45,6 +48,5 @@ layout: default
         </span>
     </div>
 
-</article>
-
-{% include framework/sidebar.html %}
+    {% include framework/sidebar.html %}
+</aside>

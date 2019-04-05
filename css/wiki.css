@@ -1,0 +1,14 @@
+@import url("styles.css");
+@import url("article/main.css");
+
+.wiki_tags {
+    color: var(--base-l-light-color);
+    float: right;
+}
+
+.wiki_tags span {
+    border: 1px dashed var(--base-l-light-color);
+    border-radius: 3px;
+    padding: 0px 1px;
+    margin: 0px 1px;
+}

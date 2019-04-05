@@ -49,7 +49,7 @@
                 $('li', self).removeClass(activeClassName);
                 highlighted = $('li:eq(' + index + ')', self).addClass(activeClassName);
                 opts.onHighlight(highlighted);
-            }, 5);
+            }, 10);
         };
         if (opts.highlightOnScroll) {
             $(window).bind('scroll', highlightOnScroll);

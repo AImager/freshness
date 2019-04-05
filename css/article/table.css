@@ -1,0 +1,32 @@
+td {
+    padding: 4px 6px;
+    border-right: 1px dashed var(--base-xl-light-color);
+    border-bottom: 1px dashed var(--base-xl-light-color);
+}
+
+th {
+    padding: 4px 6px;
+    border-right: 1px dashed var(--base-xl-light-color);
+    border-bottom: 1px dashed var(--base-xl-light-color);
+}
+
+table>thead {
+    background-color: var(--base-xxl-light-color);
+}
+
+table {
+    width: 100%;
+    margin: 0.6125em 0;
+    border-left: 1px dashed var(--base-xl-light-color);
+    border-top: 1px dashed var(--base-xl-light-color);
+    border-collapse: collapse
+}
+
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch
+}

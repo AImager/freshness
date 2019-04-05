@@ -1,0 +1,50 @@
+div.divider {
+    margin: 2em 0;
+}
+
+div.divider i {
+    margin: 0 2em;
+    color: var(--base-xxl-light-color);
+}
+
+div.divider a {
+    margin: 0 2em;
+}
+
+div.divider a i {
+    color: var(--base-s-light-color);
+    margin: 0;
+}
+
+div.divider a i:hover {
+    color: var(--base-link-color) !important;
+}
+
+div.divider {
+    position: relative;
+    font-size: 1em;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+}
+
+div.divider:before,
+div.divider:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 49%;
+    height: 2px;
+    content: '\a0';
+    background-color: var(--base-xxl-light-color);
+}
+
+div.divider:before {
+    margin-left:
+        -50%;
+    text-align: right;
+}
+
+div.divider:after {
+    margin-left: 1%;
+}

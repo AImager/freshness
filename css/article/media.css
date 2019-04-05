@@ -1,0 +1,30 @@
+img {
+    display: block;
+    margin: .5em auto;
+}
+
+@media screen and (max-width: 1023px) {
+    video {
+        width: 99.5%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width: 90%;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    video {
+        width: 799px;
+        height: auto;
+    }
+
+    img {
+        max-width: 800px;
+    }
+}

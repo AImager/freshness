@@ -1,0 +1,58 @@
+@import url(title.css);
+@import url(meta.css);
+@import url(list.css);
+@import url(code.css);
+@import url(block.css);
+@import url(table.css);
+@import url(media.css);
+
+:root {
+    --base-select-font-color: #fff;
+    --base-select-backgroup-color: #777;
+
+    --base-font-color: #555;
+    --base-backgroup-color: #f9f9f9;
+
+    --base-link-color: #bb2222;
+    --base-link-hover-color: #dd1144;
+    --base-dark-link-hover-color: #b96969;
+
+    --base-s-light-color: #999;
+    --base-l-light-color: #ccc;
+    --base-xl-light-color: #e0e0e0;
+    --base-xxl-light-color: #eee;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-bottom: 4px;
+}
+
+article {
+    margin: 2em 0;
+}
+
+article p {
+    padding: 0.7em 0;
+    text-align: justify;
+    table-layout: fixed;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1023px) {
+    article .post img {
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    article .post img {
+        max-width: 800px;
+    }
+}
+
+hr {
+    margin: 1em 0;
+}

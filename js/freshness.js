@@ -79,7 +79,7 @@ gitment.render('container_comment')
  * sidebar
  */
 // 打开导航栏
-$('#content_nav').click(function () {
+$('#toc_switch').click(function () {
     $('#toc').toc({
         'selectors': 'h2,h3',
         'highlightOnScroll': true,

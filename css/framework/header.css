@@ -1,5 +1,9 @@
 /*content*/
 
+.fa-wiki:before {
+    content: "\f02d";
+}
+
 header {
     text-align: justify;
 }
@@ -10,15 +14,23 @@ header:after {
     display: inline-block;
 }
 
-header #header {
+header #title {
     display: inline-block;
     position: relative;
     top: 1em;
 }
 
-header #header h1 a {
-    color: #a9a9a9;
+header>#title>h1 {
+    font-size: 1.4em;
+}
+
+header>#title>h1>a {
+    color: var(--base-s-light-color);
     display: block;
+}
+
+header>#title>h1>a:hover {
+    color: var(--base-link-hover-color);
 }
 
 header nav {
@@ -28,34 +40,16 @@ header nav {
 }
 
 header nav span {
-    margin: .5em;
+    margin: 0.5em;
 }
 
 header nav a {
-    color: #ccc;
+    color: var(--base-l-light-color);
 }
 
-
-#content_nav {
-    position: fixed;
-    right: 5.5%;
-    bottom: 8%;
-    background-color: #bb2222;
-    opacity: 0.5;
-    color: #fff !important;
-    width: 30px;
-    height: 30px;
-    display: -webkit-box;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    z-index: 1000;
+header nav a:hover {
+    color: var(--base-link-hover-color);
 }
-
-#content_nav_t {
-    display: block;
-    font-style: normal;
-}
-
 
 @media screen and (max-width: 1023px) {
     header {
@@ -63,7 +57,6 @@ header nav a {
         margin: auto;
     }
 }
-
 
 @media screen and (min-width: 1024px) {
     header {

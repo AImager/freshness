@@ -1,7 +1,32 @@
 /*toc content*/
 
+:root {
+    --toc-backgroud-color: #262a30;
+}
+
+#toc_switch {
+    position: fixed;
+    right: 5.5%;
+    bottom: 8%;
+    background-color: var(--base-link-color);
+    opacity: 0.5;
+    color: var(--base-select-font-color) !important;
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    z-index: 1000;
+}
+
+#toc_switch_t {
+    display: block;
+    font-style: normal;
+}
+
+
 #toc {
-    background-color: #262a30;
+    background-color: var(--toc-backgroud-color);
     display: none;
     position: fixed;
     height: 100vh;
@@ -33,11 +58,11 @@
 }
 
 #toc li a {
-    color: #999;
+    color: var(--base-s-light-color);
 }
 
 #toc .toc-active a {
-    color: #b96969;
+    color: var(--base-dark-link-hover-color);
 }
 
 #toc li.toc-h3 {

@@ -1,0 +1,22 @@
+blockquote>blockquote {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+blockquote {
+    margin: 0.6125em 0;
+}
+
+blockquote {
+    padding: 0 1em;
+    border-left: 5px solid var(--base-xxl-light-color);
+    font-size: 13px;
+    line-height: 1.6;
+    display: block;
+    overflow: auto;
+    font-family: "Ubuntu", monospace;
+}
+
+blockquote>ul {
+    padding: 0.6125em 0;
+}
