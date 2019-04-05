@@ -4,6 +4,8 @@ title: Wiki
 permalink: /wiki.html
 ---
 
+<link rel="stylesheet" href="/{{ site.theme_dir }}/{{ site.theme_name }}/css/modules/wiki_archive.css">
+
 <article>
     <ul class="listing">
         {% assign categories = site.wiki | group_by_exp: "item", "item.path | split: '/' | pop | join: '/'" | sort: "name" %}
@@ -32,5 +34,3 @@ permalink: /wiki.html
 <aside>
     {% include sidebar.html %}
 </aside>
-
-<link rel="stylesheet" href="/{{ site.theme_dir }}/{{ site.theme_name }}/css/modules/wiki_archive.css">

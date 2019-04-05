@@ -4,6 +4,8 @@ title: Home
 permalink: /index.html
 ---
 
+<link rel="stylesheet" href="/{{ site.theme_dir }}/{{ site.theme_name }}/css/modules/home.css">
+
 <div id="home">
     {% for post in site.posts limit: 1 %}
     <article class="content">
@@ -30,5 +32,3 @@ permalink: /index.html
 
     <div id="previous"><a href="/archive.html">Previous</a></div>
 </div>
-
-<link rel="stylesheet" href="/{{ site.theme_dir }}/{{ site.theme_name }}/css/modules/home.css">
