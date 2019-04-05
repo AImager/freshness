@@ -29,9 +29,6 @@ h2 {
     margin-bottom: 4px;
 }
 
-article {
-    margin: 2em 0;
-}
 
 article p {
     padding: 0.7em 0;
@@ -41,17 +38,6 @@ article p {
     overflow: hidden;
 }
 
-@media screen and (max-width: 1023px) {
-    article .post img {
-        max-width: 90%;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    article .post img {
-        max-width: 800px;
-    }
-}
 
 hr {
     margin: 1em 0;

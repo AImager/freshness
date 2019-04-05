@@ -5,3 +5,7 @@
 #home .title a:hover {
     color: var(--base-link-hover-color);
 }
+
+div#previous {
+    margin-top: 1em;
+}
