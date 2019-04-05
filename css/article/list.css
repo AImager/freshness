@@ -6,32 +6,3 @@ ul,
 ol {
     margin-left: 30px;
 }
-
-ul.listing {
-    margin-top: 1em;
-    margin-left: 0px;
-}
-
-ul.listing li {
-    padding: 0;
-}
-
-.main-listing,
-.listing-item,
-.listing-seperator {
-    list-style-type: none;
-}
-
-ul.listing li.listing-item a {
-    padding: .2em 0 .2em 2em;
-}
-
-ul.listing li.listing-item time {
-    color: var(--base-s-light-color);
-    padding: 0 0 0 1em;
-}
-
-ul.listing li.listing-prefix:before {
-    content: "| ";
-    color: var(--base-l-light-color);
-}

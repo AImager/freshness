@@ -1,5 +1,5 @@
 #home .title a {
-    color: var(--base-s-light-color);
+    color: var(--base-select-backgroup-color);
 }
 
 #home .title a:hover {
