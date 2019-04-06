@@ -17,10 +17,7 @@ pre>code {
 
 pre>code:nth-of-type(2) {
     padding-left: 38px !important;
-}
-
-pre>code {
-    padding: 0.5em;
+    background-color: var(--block-background-color) !important;
 }
 
 code {
