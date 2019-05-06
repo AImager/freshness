@@ -13,12 +13,14 @@ MathJax.Hub.Config({
     }
 });
 
-var array = new Array('language-code', 'language-javascript', 'language-php', 'language-c', 'language-cpp', 'language-java', 'language-lisp', 'language-bash', 'language-matlab', 'language-mathematica', 'language-css', 'language-html', 'language-xml', 'language-cs', 'language-python', 'language-ruby', 'language-latex', 'language-nasm', 'language-masm', 'language-lingo');
+var array = new Array('language-code', 'language-lingo', 'language-javascript', 'language-php', 'language-c', 'language-cpp', 'language-java', 'language-lisp', 'language-bash', 'language-shell', 'language-matlab', 'language-mathematica', 'language-css', 'language-html', 'language-xml', 'language-python', 'language-ruby', 'language-tex', 'language-x86asm', 'language-go', 'language-rust', 'language-dockerfile', 'language-yaml', 'language-json', 'language-nginx', 'language-sql');
 var code = document.querySelectorAll("pre>code");
 for (var i = 0; i < code.length; i++) {
     if (language = code[i].parentNode.parentNode.className.toLocaleLowerCase().match("language-[^ ]*")) {
         language = language[0];
     } else if (language = code[i].parentNode.parentNode.parentNode.className.toLocaleLowerCase().match("language-[^ ]*")) {
+        language = language[0];
+    } else if (language = code[i].className.toLocaleLowerCase().match("language-[^ ]*")) {
         language = language[0];
     } else {
         language = "degregasfe25343vdg4t3";
@@ -37,7 +39,6 @@ for (var i = 0; i < code.length; i++) {
         code[i].insertAdjacentHTML('beforebegin', '<code class="code_line">' + line_span_html.substring(0, line_span_html.length - 1) + '</code>');
     } else {
         code[i].classList.add("nohighlight");
-
     }
 }
 
