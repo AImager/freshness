@@ -3,11 +3,9 @@ hljs.initHighlightingOnLoad();
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [
-            ['\\(', '\\)'],
             ['$', '$']
         ],
         displayMath: [
-            ['\[', '\]'],
             ['$$', '$$']
         ]
     }
@@ -60,19 +58,34 @@ for (i = 1; i <= all_table.length; i++) {
 }
 
 
+var footnotes = document.querySelectorAll('.footnotes li');
+var footnotesLen = footnotes.length
+for (var i = 0; i < footnotesLen; i++) {
+    expression = /\s*["]?\s*(.*?)(&amp;nbsp)/g
+    match = expression.exec(footnotes[i].innerHTML);
+    replace_html = match[1];
+    var left = new RegExp('&lt;', "g");
+    var right = new RegExp('&gt;', "g");
+    replace_html = replace_html.replace(left, "<").replace(right, ">").replace("↩", '').replace('&amp;nbsp;', '');
+    footnotes[i].innerHTML = replace_html;
+}
+
+
+
+
 /**
  * gitment
  * 设置评论组件
  */
-var gitment = new Gitment({
-    owner: 'AImager',
-    repo: 'blog',
-    oauth: {
-        client_id: 'f6fdc5a924ad8ff6a85d',
-        client_secret: '7ce8865d2d9df65ed35b7d769eac1fcf0fb8affa',
-    },
-})
-gitment.render('container_comment')
+// var gitment = new Gitment({
+//     owner: 'AImager',
+//     repo: 'blog',
+//     oauth: {
+//         client_id: 'f6fdc5a924ad8ff6a85d',
+//         client_secret: '7ce8865d2d9df65ed35b7d769eac1fcf0fb8affa',
+//     },
+// })
+// gitment.render('container_comment')
 
 
 
