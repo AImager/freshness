@@ -42,3 +42,11 @@ article p {
 hr {
     margin: 1em 0;
 }
+
+sup>a.footnote:before {
+    content: "["
+}
+
+sup>a.footnote:after {
+    content: "]"
+}
