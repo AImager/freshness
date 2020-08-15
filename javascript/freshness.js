@@ -8,7 +8,7 @@ MathJax.Hub.Config({
         // displayMath: [
         //     ['$$', '$$']
         // ]
-        inlineMath: [['$','$'], ['\\(','\\)']]
+        inlineMath: [['$','$'], ['\\[','\\]'], ['\\(','\\)']]
     }
 });
 
