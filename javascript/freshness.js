@@ -2,14 +2,18 @@ hljs.initHighlightingOnLoad();
 
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [
-            ['$', '$']
-        ],
-        displayMath: [
-            ['$$', '$$']
-        ]
+        // inlineMath: [
+        //     ['$', '$']
+        // ],
+        // displayMath: [
+        //     ['$$', '$$']
+        // ]
+        inlineMath: [['$','$'], ['\\(','\\)']]
     }
 });
+
+
+
 
 var array = new Array('language-code', 'language-lingo', 'language-javascript', 'language-php', 'language-c', 'language-cpp', 'language-java', 'language-lisp', 'language-bash', 'language-shell', 'language-matlab', 'language-mathematica', 'language-css', 'language-html', 'language-xml', 'language-python', 'language-ruby', 'language-tex', 'language-x86asm', 'language-go', 'language-rust', 'language-dockerfile', 'language-yaml', 'language-json', 'language-nginx', 'language-sql');
 var code = document.querySelectorAll("pre>code");
