@@ -16,8 +16,4 @@ Personal blog jekyll theme, view this jekyll theme in action [here](http://blog.
     * Q&A page
     * Nagging page
 
-![](/img/archive.png)
-
-![](/img/post.png)
-
-![](/img/nagging.png)
+![](/img/template.png)
